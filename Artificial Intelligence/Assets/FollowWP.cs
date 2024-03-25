@@ -15,6 +15,7 @@ public class FollowWP : MonoBehaviour
     GameObject currentNode;
     int currentWP = 0;
     Graph g;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,7 +53,7 @@ public class FollowWP : MonoBehaviour
         if (Vector3.Distance(g.pathList[currentWP].getId().transform.position,
             this.transform.position) < accuracy)
         {
-           currentNode = g.pathList[currentWP].getId();
+            currentNode = g.pathList[currentWP].getId();
             currentWP++;
         }
 
